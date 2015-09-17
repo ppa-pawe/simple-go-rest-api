@@ -20,6 +20,12 @@ func main() {
 	
 	// Create a user resource
 	r.POST("/user", uc.CreateUser)
+	
+	// Update a user resource
+	r.PUT("/user/:id", uc.UpdateUser)
+	
+	// Delete a user resource
+	r.DELETE("/user/:id", uc.DeleteUser)
 
     // Fire up the server
     http.ListenAndServe("localhost:3000", r)

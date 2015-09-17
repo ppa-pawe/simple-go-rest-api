@@ -44,3 +44,11 @@ func (uc UserController) CreateUser(w http.ResponseWriter, r *http.Request, p ht
 	w.WriteHeader(201)
 	fmt.Fprintf(w, "%s", uj)
 }
+
+func (uc UserController) UpdateUser(w http.ResponseWriter, r *http.Request, p httprouter.Params){
+	w.WriteHeader(200)
+}
+
+func (uc UserController) DeleteUser(w http.ResponseWriter, r *http.Request, p httprouter.Params){
+	w.WriteHeader(200)
+}
