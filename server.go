@@ -8,7 +8,7 @@ import (
 
     // Third party packages
     "github.com/julienschmidt/httprouter"
-    "github.com/ppa-pawe/simple-go-rest-api"
+    "github.com/ppa-pawe/simple-go-rest-api/models"
 )
 
 func main() {  
@@ -18,7 +18,7 @@ func main() {
     // Get a user resource
     r.GET("/user/:id", func(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
         // Stub an example user
-        u := User{
+        u := models.User{
             Name:   "Bob Smith",
             Gender: "male",
             Age:    50,

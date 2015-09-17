@@ -1,4 +1,4 @@
-package main
+package models
 
 type (  
     // User represents the structure of our resource
