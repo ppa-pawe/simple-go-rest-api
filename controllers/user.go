@@ -7,14 +7,17 @@ import (
 	
 	"github.com/julienschmidt/httprouter"
     "github.com/ppa-pawe/simple-go-rest-api/models"
+	"gopkg.in/mgo.v2"
 )
 
 type (
-	UserController struct{}
+	UserController struct{
+		session *mgo.Session
+	}
 )
 
-func NewUserController() *UserController{
-	return &UserController{}
+func NewUserController(s *mgo.Session) *UserController{
+	return &UserController{s}
 }
 
 func (uc UserController) GetUser(w http.ResponseWriter, r *http.Request, p httprouter.Params){
